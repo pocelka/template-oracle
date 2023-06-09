@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "xyz.plsql-language",
+        "aaron-bond.better-comments",
+        "streetsidesoftware.code-spell-checker",
+        "EditorConfig.EditorConfig",
+        "wayou.vscode-todo-highlight",
+        "Gruntfuggly.todo-tree"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "editor.wordWrapColumn": 120,
+    "editor.rulers": [
+        {
+            "column": 80,
+            "color": "#ff00ff"
+        },
+        {
+            "column": 120,
+            "color": "#ff0000"
+        }
+    ],
+    "cSpell.enabledLanguageIds": [
+        "javascript",
+        "json",
+        "markdown",
+        "plaintext",
+        "plsql",
+        "python",
+        "text",
+        "typescript",
+        "yml"
+    ],
+    "files.eol": "\n",
+    "files.associations": {
+        "*.pks": "plsql",
+        "*.pkb": "plsql",
+        "*.tps": "plsql",
+        "*.tpb": "plsql",
+        "*.sql": "plsql"
+    }
+}

@@ -1,0 +1,72 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+    },
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    },
+    "tasks": [
+        {
+            "label": "Oracle: Execute SQL",
+            "type": "shell",
+            "command": ".vscode/scripts/run_sql.sh",
+            "args": [
+                // "${relativeFile}",
+                // "${file}"
+                // Escaped double quotes are required to make compatible with Cmder in Windows
+                "${relativeFile}",
+                "${file}",
+                "${input:bw_entry}"
+            ],
+            "problemMatcher": {
+                "owner": "plsql",
+                "fileLocation": ["relative", "${fileDirname}"],
+                "pattern": [
+                    {
+                        "regexp": "(.*) (\\d*)/(\\d*) (.*?) (.*)",
+                        "severity": 1,
+                        "line": 2,
+                        "column": 3,
+                        "file": 4,
+                        "message": 5,
+                        "loop": true
+                    }
+                ]
+            },
+            "options": {
+                "env": {
+                    "OCI_WALLET": "CHANGE"
+                }
+            }
+        },
+        // EXPORT apex applications
+        {
+            "label": "Oracle: Export APEX Application",
+            "type": "shell",
+            "command": ".vscode/scripts/apex_export.sh",
+            "args": [],
+            "options": {},
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "bw_entry",
+            "type": "pickString",
+            "description": "Which Bitwarden entry should be used as connection string?",
+            "options": ["CHANGE", "CHANGE"],
+            "default": "CHANGE"
+        },
+        {
+            "id": "apex_app_id",
+            "type": "promptString",
+            "description": "Which apex application should be exported?"
+        }
+    ]
+}
