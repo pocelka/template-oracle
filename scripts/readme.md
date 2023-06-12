@@ -1,9 +1,14 @@
-Bitwarden setup (pre-requisite):
-set env variables BW_CLIENTID and BW_CLIENTSECRET
-bw login --apikey
-bw unlock --raw
-set env variable BW_SESSION=""
+# Scripts
 
-bw get item "Oracle - DB ATP1 - dev" | jq -r '.login.username'
-bw get item "Oracle - DB ATP1 - dev" | jq -r '.fields[] | select (.name=="DB Pass") | .value'
+Files in this folder can be used for multiple purposes such as VSCode compilation etc.
+
+- [Scripts](#scripts)
+  - [Files](#files)
+
+## Files
+
+| File            | Description                                                                 |
+| --------------- | --------------------------------------------------------------------------- |
+| helper.sh       | Helper functions that all other scripts should call.                        |
+| show_errors.sql | Helper script used by VSCode to populate `Problems` tab during compilation. |
 
