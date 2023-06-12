@@ -40,11 +40,12 @@ Once [configured](#setup) the high level process to leverage this template is as
 
 The default folder structure (listed below) provides a set of common folders most projects will use. You're encouraged to add new folders to your projects where necessary.
 
-| Folder                   | Description                                                            |
-| ------------------------ | ---------------------------------------------------------------------- |
-| [`.vscode`](.vscode/)    | [Visual Studio Code](https://code.visualstudio.com/) specific settings |
-| [`apex`](database/apex/) | Application exports                                                    |
-| [`data`](database/data/) | Conversion and seed data scripts                                       |
-| docs                     | Project documents                                                      |
-| [`scripts`](scripts/)    | Usually re-runable scripts or tools                                    |
-| www                      | Assets that go in the server: images, CSS, and JavaScript              |
+| Folder / File            | Description                                                                                 |
+| ------------------------ | ------------------------------------------------------------------------------------------- |
+| [`.vscode`](.vscode/)    | [Visual Studio Code](https://code.visualstudio.com/) specific settings                      |
+| [`apex`](database/apex/) | Application exports                                                                         |
+| [`data`](database/data/) | Conversion and seed data scripts                                                            |
+| docs                     | Project documents                                                                           |
+| [`scripts`](scripts/)    | Usually re-runable scripts or tools                                                         |
+| www                      | Assets that go in the server: images, CSS, and JavaScript                                   |
+| version                  | Version of the application in [semantic versioning](https://semver.org) - major.minor.patch |

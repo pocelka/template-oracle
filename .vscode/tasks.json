@@ -20,7 +20,6 @@
                 // "${relativeFile}",
                 // "${file}"
                 // Escaped double quotes are required to make compatible with Cmder in Windows
-                "${relativeFile}",
                 "${file}",
                 "${input:bw_entry}"
             ],
@@ -41,17 +40,27 @@
             },
             "options": {
                 "env": {
-                    "OCI_WALLET": "CHANGE"
+                    "OCI_WALLET_MAC": "/Users/peter.ocelka/Oracle/network/admin/DB202001071604/wallet.zip",
+                    "OCI_WALLET_LINUX": "/home/peter/Documents/oracle/DB202001071604/wallet.zip",
+                    "SQL_CLI_BINARY": "sql"
                 }
             }
         },
-        // EXPORT apex applications
         {
             "label": "Oracle: Export APEX Application",
             "type": "shell",
             "command": ".vscode/scripts/apex_export.sh",
-            "args": [],
-            "options": {},
+            "args": [
+                "${input:bw_entry}",
+                "${input:apex_app_id}"
+            ],
+            "options": {
+                "env": {
+                    "OCI_WALLET_MAC": "/Users/peter.ocelka/Oracle/network/admin/DB202001071604/wallet.zip",
+                    "OCI_WALLET_LINUX": "/home/peter/Documents/oracle/DB202001071604/wallet.zip",
+                    "SQL_CLI_BINARY": "sql"
+                }
+            },
             "problemMatcher": []
         }
     ],
@@ -60,13 +69,13 @@
             "id": "bw_entry",
             "type": "pickString",
             "description": "Which Bitwarden entry should be used as connection string?",
-            "options": ["CHANGE", "CHANGE"],
-            "default": "CHANGE"
+            "options": ["Oracle - DB ATP1 - dev", "Oracle - DB ATP1 - prd"],
+            "default": "Oracle - DB ATP1 - dev"
         },
         {
             "id": "apex_app_id",
             "type": "promptString",
-            "description": "Which apex application should be exported?"
+            "description": "Which apex applications should be exported?"
         }
     ]
 }
