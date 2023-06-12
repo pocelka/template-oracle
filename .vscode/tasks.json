@@ -41,7 +41,7 @@
             "options": {
                 "env": {
                     "OCI_WALLET_MAC": "/Users/peter.ocelka/Oracle/network/admin/DB202001071604/wallet.zip",
-                    "OCI_WALLET_LINUX": "/home/peter/Documents/oracle/DB202001071604/wallet.zip",
+                    "OCI_WALLET_LINUX": "/home/peter/Documents/oracle/Wallet_DB202001071604.zip",
                     "SQL_CLI_BINARY": "sql"
                 }
             }
@@ -57,7 +57,7 @@
             "options": {
                 "env": {
                     "OCI_WALLET_MAC": "/Users/peter.ocelka/Oracle/network/admin/DB202001071604/wallet.zip",
-                    "OCI_WALLET_LINUX": "/home/peter/Documents/oracle/DB202001071604/wallet.zip",
+                    "OCI_WALLET_LINUX": "/home/peter/Documents/oracle/Wallet_DB202001071604.zip",
                     "SQL_CLI_BINARY": "sql"
                 }
             },

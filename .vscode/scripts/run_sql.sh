@@ -10,7 +10,7 @@ TASK_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Load helper
 source "${TASK_SCRIPT_DIR}/../../scripts/helper.sh"
 
-Determine platform to correctly set OCI wallet.
+# Determine platform to correctly set OCI wallet.
 if [ "$(uname)" == "Darwin" ]; then
   OCI_WALLET=${OCI_WALLET_MAC}
 else
