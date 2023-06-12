@@ -76,8 +76,11 @@ verify_config() {
 
 get_connection_string() {
 
-  DB_USER=$(bw get item "${BW_ENTRY}" | jq -r '.login.username')
-  DB_PASSWORD=$(bw get item "${BW_ENTRY}" | jq -r '.fields[] | select (.name=="DB Pass") | .value')
+  BW=$(bw get item "${BW_ENTRY}")
+
+  DB_USER=echo "${BW}" | jq -r '.login.username')
+  DB_PASSWORD=echo "${BW}" | jq -r '.fields[] | select (.name=="DB Pass") | .value')
+  DB_NAME=echo "${BW}" | jq -r '.fields[] | select (.name=="TNS") | .value')
 
 }
 ################################################################################
