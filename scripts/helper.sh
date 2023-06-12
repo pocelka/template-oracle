@@ -78,9 +78,9 @@ get_connection_string() {
 
   BW=$(bw get item "${BW_ENTRY}")
 
-  DB_USER=echo "${BW}" | jq -r '.login.username')
-  DB_PASSWORD=echo "${BW}" | jq -r '.fields[] | select (.name=="DB Pass") | .value')
-  DB_NAME=echo "${BW}" | jq -r '.fields[] | select (.name=="TNS") | .value')
+  DB_USER=$(echo "${BW}" | jq -r '.login.username')
+  DB_PASSWORD=$(echo "${BW}" | jq -r '.fields[] | select (.name=="DB Pass") | .value')
+  DB_NAME=$(echo "${BW}" | jq -r '.fields[] | select (.name=="TNS") | .value')
 
 }
 ################################################################################
