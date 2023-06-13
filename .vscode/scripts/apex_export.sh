@@ -41,6 +41,8 @@ do
   -- Connect to DB
   connect ${DB_USER}/${DB_PASSWORD}@${DB_NAME}
 
+  prompt Path: ${PROJECT_DIR}/database/apex
+
   --export in split format
   apex export -applicationid ${app} -dir ${PROJECT_DIR}/database/apex -skipExportDate -expPubReports -expSavedReports -expTranslations -split
 
@@ -55,12 +57,13 @@ EOF
   # In order to support the various versions of sed need to add the "-bak"
   # See: https://unix.stackexchange.com/questions/13711/differences-between-sed-on-mac-osx-and-other-standard-sed/131940#131940
   if [ "${VERSION}" != "" ]; then
-    sed -i -bak "s/%RELEASE_VERSION%/$VERSION/" "${PROJECT_DIR}/database/apex/f${app}.sql"
-    sed -i -bak "s/%RELEASE_VERSION%/$VERSION/" "${PROJECT_DIR}/database/apex/f${app}/application/create_application.sql"
+    sed --in-place=-bak "s/%RELEASE_VERSION%/$VERSION/" "${PROJECT_DIR}/database/apex/f${app}.sql"
+    sed --in-place=-bak "s/%RELEASE_VERSION%/$VERSION/" "${PROJECT_DIR}/database/apex/f${app}/application/create_application.sql"
 
     # Remove the backup version of file (see above)
     rm "${PROJECT_DIR}/database/apex/f${app}.sql-bak"
     rm "${PROJECT_DIR}/database/apex/f${app}/application/create_application.sql-bak"
 
   fi
+
 done
