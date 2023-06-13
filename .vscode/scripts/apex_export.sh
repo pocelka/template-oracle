@@ -57,8 +57,10 @@ EOF
   if [ "${VERSION}" != "" ]; then
     sed -i -bak "s/%RELEASE_VERSION%/$VERSION/" "${PROJECT_DIR}/database/apex/f${app}.sql"
     sed -i -bak "s/%RELEASE_VERSION%/$VERSION/" "${PROJECT_DIR}/database/apex/f${app}/application/create_application.sql"
+
+    # Remove the backup version of file (see above)
+    rm "${PROJECT_DIR}/database/apex/f${app}.sql-bak"
+    rm "${PROJECT_DIR}/database/apex/f${app}/application/create_application.sql-bak"
+
   fi
-  # # Remove the backup version of file (see above)
-  rm "${PROJECT_DIR}/database/apex/f${app}.sql-bak"
-  rm "${PROJECT_DIR}/database/apex/f${app}/application/create_application.sql-bak"
 done
