@@ -41,8 +41,6 @@ do
   -- Connect to DB
   connect ${DB_USER}/${DB_PASSWORD}@${DB_NAME}
 
-  prompt Path: ${PROJECT_DIR}/database/apex
-
   --export in split format
   apex export -applicationid ${app} -dir ${PROJECT_DIR}/database/apex -skipExportDate -expPubReports -expSavedReports -expTranslations -split
 
