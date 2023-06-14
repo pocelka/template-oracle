@@ -25,7 +25,7 @@ This template contains a lot of features that may help with your project.
 - [Build](build/): Scripts to generate the release
 - [Folders](#folder-structure): The most common project folder structure is provided with this project.
 - [Release](release/): Framework to build and do releases.
-- [Visual Studio Code](https://code.visualstudio.com/) (VSC) integration: compile or run your SQL and PL/SQL code right from VSC. More details are provided in the [`.vscode`](.vscode/) folder.
+- [Visual Studio Code][vscode] (VSC) integration: compile or run your SQL and PL/SQL code right from VSC. More details are provided in the [`.vscode`](.vscode/) folder.
 
 Once [configured](#setup) the high level process to leverage this template is as follows:
 
@@ -42,10 +42,12 @@ The default folder structure (listed below) provides a set of common folders mos
 
 | Folder / File            | Description                                                                                 |
 | ------------------------ | ------------------------------------------------------------------------------------------- |
-| [`.vscode`](.vscode/)    | [Visual Studio Code](https://code.visualstudio.com/) specific settings                      |
+| [`.vscode`](.vscode/)    | [Visual Studio Code][vscode] specific settings                                              |
 | [`apex`](database/apex/) | Application exports                                                                         |
 | [`data`](database/data/) | Conversion and seed data scripts                                                            |
 | docs                     | Project documents                                                                           |
 | [`scripts`](scripts/)    | Usually re-runable scripts or tools                                                         |
 | www                      | Assets that go in the server: images, CSS, and JavaScript                                   |
 | version                  | Version of the application in [semantic versioning](https://semver.org) - major.minor.patch |
+
+[vscode]: https://code.visualstudio.com/
