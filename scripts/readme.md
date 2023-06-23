@@ -7,8 +7,8 @@ Files in this folder can be used for multiple purposes such as VSCode compilatio
 
 ## Files
 
-| File            | Description                                                                 |
-| --------------- | --------------------------------------------------------------------------- |
-| helper.sh       | Helper functions that all other scripts should call.                        |
-| show_errors.sql | Helper script used by VSCode to populate `Problems` tab during compilation. |
-
+| File              | Description                                                                 |
+| ----------------- | --------------------------------------------------------------------------- |
+| helper.sh         | Helper functions that all other scripts should call.                        |
+| show_errors.sql   | Helper script used by VSCode to populate `Problems` tab during compilation. |
+| doc_generator.sql | Script used to parse documentation from packages.                           |
