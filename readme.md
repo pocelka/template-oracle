@@ -45,7 +45,7 @@ The default folder structure (listed below) provides a set of common folders mos
 | [`.vscode`](.vscode/)    | [Visual Studio Code][vscode] specific settings                                              |
 | [`apex`](database/apex/) | Application exports                                                                         |
 | [`data`](database/data/) | Conversion and seed data scripts                                                            |
-| docs                     | Project documents                                                                           |
+| docs                     | Project documents and/or documentation generated for packages.                              |
 | [`scripts`](scripts/)    | Usually re-runable scripts or tools                                                         |
 | www                      | Assets that go in the server: images, CSS, and JavaScript                                   |
 | version                  | Version of the application in [semantic versioning](https://semver.org) - major.minor.patch |

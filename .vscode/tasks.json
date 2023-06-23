@@ -62,7 +62,28 @@
                 }
             },
             "problemMatcher": []
-        }
+        },
+        {
+            "label": "Oracle: Generate Package Documentation",
+            "type": "shell",
+            "command": ".vscode/scripts/generate_doc.sh",
+            "args": [
+                // "${relativeFile}",
+                // "${file}"
+                // Escaped double quotes are required to make compatible with Cmder in Windows
+                "${file}",
+                "${input:bw_entry}",
+                "${input:package_name}"
+            ],
+            "options": {
+                "env": {
+                    "OCI_WALLET_MAC": "/Users/peter.ocelka/Oracle/network/admin/DB202001071604/wallet.zip",
+                    "OCI_WALLET_LINUX": "/home/peter/Documents/oracle/Wallet_DB202001071604.zip",
+                    "SQL_CLI_BINARY": "sql"
+                }
+            },
+            "problemMatcher": []
+        },
     ],
     "inputs": [
         {
@@ -76,6 +97,11 @@
             "id": "apex_app_id",
             "type": "promptString",
             "description": "Which apex applications should be exported?"
+        },
+        {
+            "id": "package_name",
+            "type": "promptString",
+            "description": "Pacakge for which should be generated documentation?"
         }
     ]
 }
