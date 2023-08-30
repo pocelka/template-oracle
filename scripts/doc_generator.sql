@@ -289,6 +289,7 @@ begin
 
          g_output := g_output
                      || c_eol
+                     || c_eol
                      || get_arguments(p_package_name => upper(cur_pkg.package_name),
                                       p_routine_name => cur_rout.name,
                                       p_first_line => cur_rout.line,
